@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Ocultar Sugestões do Instagram",
+  "version": "1.0.1",
+  "description": "Remove a seção de sugestões de seguidores da página inicial do Instagram.",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["*://www.instagram.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "extInstagramHideSuggestions",
+      "strict_min_version": "58.0"
+    }
+  }
+}
